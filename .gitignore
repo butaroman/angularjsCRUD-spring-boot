@@ -1,0 +1,13 @@
+.idea/
+target/
+AngularJsSimpleApp.iml
+src/main/webapp/e2e-tests/
+src/main/webapp/node-modules/
+src/main/webapp/scripts/
+src/main/webapp/app/bower_components/
+src/main/webapp/app/img/
+src/main/webapp/app/phones/
+
+
+
+

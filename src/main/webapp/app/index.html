@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+  integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+ 
+</head>
+<body >
+	<div ng-controller="myCtrl">
+		<input type="text" placeholder="enter title" ng-model="movieTitle"/>
+		<input type="text" placeholder="enter director" ng-model="movieDirector"/>
+		<button ng-click="addNewMovie()">Add new movie</button>
+		<h3>Movie table. Size: {{movieList.length}}</h3>
+		<table>
+			<tr>
+				<th>№</th>
+				<th>Title</th>
+				<th>Director</th>
+				<th>Button</th>
+			</tr>
+			<tr ng-repeat="movie in movieList">
+				<td>{{$index + 1}}</td>
+				<td>{{movie.title}}</td>
+				<td>{{movie.director}}</td>
+				<td><button ng-click="deleteMovie(movie)">Delete</button></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
